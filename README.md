@@ -74,7 +74,6 @@ Any changes pushed to the main branch on GitHub trigger a new production deploym
 - SEO optimization and performance improvements
 - Enhanced accessibility (ARIA roles and keyboard navigation)
 
-📌 Disclaimer
+## 📌 Disclaimer
 This project is built for learning, demonstration, and portfolio purposes.
 It does not represent a production-ready real estate platform.
-
