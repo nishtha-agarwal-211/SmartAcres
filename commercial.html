@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commercial Properties | SmartAcres Real Estate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="heads">SmartAcres</div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="listings.html">All Properties</a>
+            <a href="commercial.html">Commercial</a>
+            <a href="contact.html">Contact Us!</a>
+        </nav>
+    </header>
+
+    <section class="properties">
+        <h2>Commercial Properties</h2>
+        <div id="propertyList" class="property-grid">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Company Info -->
+            <div class="footer-col">
+                <h3>SmartAcres</h3>
+                <p>Your trusted partner in finding the perfect property. We make buying, selling, and renting real estate simple and transparent.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Properties</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>123 Real Estate Avenue,<br>Bangalore, Karnataka, 560001</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Email: hello@smartacres.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SmartAcres. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (propertyList) {
+            const commercialProperties = properties.filter(property => property.type === "Commercial");
+            displayProperties(commercialProperties);
+        }
+    </script>
+
+</body>
+
+</html>

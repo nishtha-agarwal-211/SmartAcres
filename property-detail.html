@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details | SmartAcres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="heads">SmartAcres</div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html#hero">Home</a>
+            <a href="index.html#buy">Buy</a>
+            <a href="index.html#rent">Rent</a>
+            <a href="index.html#new-launch">New Launch</a>
+            <a href="index.html#commercial">Commercial</a>
+            <a href="index.html#plots">Plots/Land</a>
+            <a href="contact.html">Contact Us!</a>
+
+            <button class="auth-nav-btn" id="authBtn" onclick="openAuthModal()">Login</button>
+
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <span class="user-name" id="userName"></span>
+                <button class="logout-btn" onclick="handleLogout()">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== PROPERTY DETAIL SECTION ========== -->
+    <section class="property-detail-section">
+        <div class="container">
+            <div class="property-detail-container" id="propertyDetailContainer">
+                <p style="text-align: center; padding: 60px 20px; color: var(--color-gray);">Loading property details...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SIMILAR PROPERTIES SECTION ========== -->
+    <section class="similar-properties-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px; color: var(--color-dark);">Similar
+                Properties</h2>
+            <div class="property-list" id="similarPropertiesList">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>SmartAcres</h3>
+                <p>Your trusted partner in finding the perfect property. We make buying, selling, and renting real
+                    estate simple and transparent.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#buy">Buy</a></li>
+                    <li><a href="index.html#rent">Rent</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>123 Real Estate Avenue,<br>Bangalore, Karnataka, 560001</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Email: hello@smartacres.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SmartAcres. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== CONTACT AGENT MODAL ========== -->
+    <div id="contactAgentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contact Agent</h2>
+                <button class="close-modal" onclick="closeContactAgentModal()">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="agent-profile">
+                    <div id="modalAgentPhoto" class="agent-profile-photo"></div>
+                    <div class="agent-profile-info">
+                        <h3 id="modalAgentName"></h3>
+                        <p id="modalAgentRating" class="agent-profile-rating"></p>
+                    </div>
+                </div>
+
+                <div class="agent-contact-details">
+                    <div class="contact-detail">
+                        <strong>📧 Email:</strong>
+                        <a id="modalAgentEmail" href="" class="contact-link"></a>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>📞 Phone:</strong>
+                        <a id="modalAgentPhone" href="" class="contact-link"></a>
+                    </div>
+                </div>
+
+                <p class="agent-note">Our agent will get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== IMAGE LIGHTBOX ========== -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+        <div class="lightbox-content">
+            <button class="lightbox-prev" onclick="changeLightboxImage(-1)" aria-label="Previous">&#10094;</button>
+            <img id="lightboxImage" class="lightbox-image" src="" alt="Property Image">
+            <button class="lightbox-next" onclick="changeLightboxImage(1)" aria-label="Next">&#10095;</button>
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+</body>
+
+</html>
